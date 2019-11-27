@@ -29,6 +29,12 @@ body {
   margin-right: 15px;
 }
 
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
 #new-problem,
 #loading {
   display: none;
