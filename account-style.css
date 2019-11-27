@@ -34,7 +34,12 @@ body {
 }
 
 .row {
+  padding: 35px;
   width: 100%;
   display: flex;
   flex-direction: row;
+}
+
+#padded {
+  padding: 35px;
 }
