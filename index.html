@@ -9,6 +9,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Oxy Clan</title>
+
     <link
       rel="shortcut icon"
       type="image/png"
@@ -27,12 +28,14 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Bootstrap CSS -->
-    <link
+    <!--<link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
-    />
+    /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -59,7 +62,7 @@
         <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav ml-auto">
             <li class="nav-link">
-              <a href="#">Content</a>
+              <a href="content.html">Content</a>
             </li>
             <li class="nav-link">
               <a href="members.html">Members</a>
@@ -85,16 +88,18 @@
       <div
         class="jumbotron col-md-10 offset-md-1"
       >
+<img style="display: block; margin-left: auto; margin-right: auto;" src="images/icon/oxyClanLogo.png" alt="" width="128" height="128" />
+
         <h2>Welcome to Oxy Clan</h2>
         <p style="font-size: 22px;">
           We are a specialized group of diversely talented artists!
         </p>
         <p style="font-size: 18px;">
-          login below:
+
         </p>
         <hr />
 
-        <form>
+        <!--<form>
           <div class="form-group form-inline d-flex justify-content-between">
             <input
               type="email"
@@ -113,23 +118,31 @@
             />
           </div>
           <!-- OLD CODE: <a href="account.html" class="btn btn-success">Login</a> -->
-          <button
-            type="button"
-            class="btn btn-success"
-            data-toggle="modal"
-            data-target="#captcha"
-          >
-            Login
-          </button>
-          
-          <a href="account.html" class="btn btn-success">Login</a>
 
-          <button type="button" class="btn btn-primary">Apply Today</button>
-        </form>
+
+          <!--<button type="button" class="btn btn-primary">Apply Today</button> -->
+        <!-- </form> -->
+
+        <div class="btn-group btn-group-lg" role="group" aria-label="...">
+
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-toggle="modal"
+          data-target="#captcha"
+        >
+          Math
+        </button>
+
+        <a href="content.html" class="btn btn-warning">Content</a>
+
+        <a href="members.html" class="btn btn-success">Members</a>
+
+        </div>
 
         <div style="height: 3vh;"></div>
 
-        <a href="#">Forgot your username or password?</a>
+        <a href="#">Website created by Asmolav</a>
         <div style="height: 1vh;"></div>
         <p style="font-size: 12px;">
           Thank you for visiting our website!
@@ -156,22 +169,10 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
       async
     ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     <script type="text/javascript">
 		var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 	        document.body.style.backgroundColor = "red";
@@ -182,7 +183,7 @@
 			if (i === colors.length){
 				i=0;
 			}
-		}, 5000);
+		}, 3000);
 	</script>
   </body>
   <div class="modal fade" id="captcha">
