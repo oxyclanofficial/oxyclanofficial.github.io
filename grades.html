@@ -9,15 +9,13 @@
 
 
     <title>Oxy Clan Grades</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <div class="container">
         <div class="table-responsive">
             <h1>Welcome to your online Oxy Clan grade portal!</h1>
-            <h2>Please check your google classroom for assignments.</h2>
+            <h4>Please check your google classroom for assignments.</h4>
             <br />
 
             <table class="table table-bordered table-striped" id="grade_table">
@@ -33,21 +31,25 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
+
+
+      <script>
+      $(document).ready(function(){
+          $.getJson("grades.json", function(data){
+              var grade_data = '';
+              $.each(data, function(key, value){
+                grade_data += '<tr>';
+                grade_data += '<td>' + value.name+'</td>';
+                grade_data += '<td>' + value.grade+'</td>';
+                grade_data += '<td>' + value.letterGrade+'</td>';
+                grade_data += '</tr>';
+              });
+              $('#grade_table').append(grade_data);
+          });
+      });
+      </script>
+    
   </body>
 </html>
 
-<script>
-$(document).ready(function(){
-    $.getJson("grades.json", function(data){
-        var grade_data = '';
-        $.each(data, function(key, value){
-          grade_data += '<tr>';
-          grade_data += '<td>' + value.name+'</td>';
-          grade_data += '<td>' + value.grade+'</td>';
-          grade_data += '<td>' + value.letterGrade+'</td>';
-          grade_data += '</tr>';
-        });
-        $('#grade_table').append(grade_data);
-    });
-});
-</script>
+      
