@@ -39,7 +39,7 @@
 
     <script>
     $(document).ready(function(){
-        $.getJson("grades.json", function(data){
+        $.getJSON("grades.json", function(data){
             var grade_data = '';
             $.each(data, function(key, value){
               grade_data += '<tr>';
