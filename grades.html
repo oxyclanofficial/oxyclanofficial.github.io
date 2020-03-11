@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
     <!-- Bootstrap CSS -->
@@ -38,17 +39,17 @@
 
     <script>
     $(document).ready(function(){
-      $.get("grades.json", function(data, status){
-        console.log(data);
-        var data = JSON.parse(data)
-
-        data.forEach(function(dt){
-          $("#tdata").append("<tr>" + "<td>" + dt.name + "</td>" + "<td>" + dt.grade + "</td>" + "<td>" + dt.letterGrade + "</td>" + "</tr>" 
-
-          );
+        $.getJson("grades.json", function(data){
+            var grade_data = '';
+            $.each(data, function(key, value){
+              grade_data += '<tr>';
+              grade_data += '<td>' + value.name+'</td>';
+              grade_data += '<td>' + value.grade+'</td>';
+              grade_data += '<td>' + value.letterGrade+'</td>';
+              grade_data += '</tr>';
+            });
+            $('#grade_table').append(grade_data);
         });
-      });
-
     });
     </script>
         
