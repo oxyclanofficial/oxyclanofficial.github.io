@@ -32,14 +32,14 @@
   {
     "id": "6",
     "name": "Taz",
-    "grade": "100",
-    "letterGrade": "A+"
+    "grade": "0",
+    "letterGrade": "F"
   },
   {
     "id": "7",
     "name": "Nugget",
-    "grade": "100",
-    "letterGrade": "A+"
+    "grade": "0",
+    "letterGrade": "F"
   },
   {
     "id": "8",
